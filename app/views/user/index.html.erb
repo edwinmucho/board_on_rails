@@ -1,0 +1,6 @@
+<h1>회원 목록</h1>
+<p>회원 목록</p>
+<%@users.each do |user|%>
+<a href='/user/show/<%=user.id%>'><%=user.email%></a><br><hr>
+<%end%>
+

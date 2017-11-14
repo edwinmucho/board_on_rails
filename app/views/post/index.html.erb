@@ -1,0 +1,16 @@
+<h1게시판</h1>
+<p>게시글 목록</p>
+
+<table>
+    <tr>
+        <th>제목</th>
+        <th>날짜</th>
+    </tr>
+<%@posts.each do |post|%>
+<tr>
+    <td><a href='/post/show/<%=post.id%>'><%=post.title%></a></td>
+    <td><%=post.updated_at%></td>
+</tr>
+<%end%>
+</table>
+<a href='/post/new'>[글쓰기]</a>
